@@ -43,7 +43,10 @@ def flames(request):
             'e': 'Enemy',
             's': 'Sister (Siblings)'
         }
+        if (your_name != partner_name):
         out = f_dict[flames]
+        elif (your_name == partner_name):
+            out = " Don't try to FOOL me, You love yourslef the most"
         return render(request,"flames.html",{"flames" : out})
     return render(request,"flames.html",{'Form':form})
 
