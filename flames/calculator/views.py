@@ -14,8 +14,8 @@ def flames(request):
         partner_name = form.cleaned_data['partner_name']
         # print(your_name)
         # print(partner_name)
-        your_name = [i for i in your_name]
-        partner_name = [i for i in partner_name]
+        your_name = [i for i in your_name.lower()]
+        partner_name = [i for i in partner_name.lower()]
 
         for i in range(len(your_name)):
             for i in your_name:
